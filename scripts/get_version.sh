@@ -2,8 +2,11 @@
 
 set -euo pipefail
 
+# OS codename
+OS_CODENAME="$(curl -fsSL https://raw.githubusercontent.com/tianon/docker-brew-ubuntu-core/master/latest)"
+
 # Application version
-APP_VERSION="$(curl -sSL --retry 5 --retry-delay 2 "https://radarr.servarr.com/v1/update/master/changes" | jq -r '.[0].version')"
+APP_VERSION="$(curl -fsSL --retry 5 --retry-delay 2 https://packages.ubuntu.com/$OS_CODENAME/transmission-daemon | grep 'Package:' | awk -F '(' {'print $2'} | cut -d \- -f 1)"
 
 # Export C_VERSION
 echo "export C_VERSION=\""$APP_VERSION"\"" >> $BASH_ENV
