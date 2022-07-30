@@ -21,7 +21,7 @@
 [![Docker Pulls][docker_pulls_logo]][docker_pulls_url]
 [![License][license_logo]][license_url]
 
-Transmission is a cross-platform BitTorrent client that is open source, easy to use, and includes power features such as:
+Transmission is an open-source cross-platform BitTorrent client that is easy to use and includes powerful features such as:
 
 - Encryption
 - Web interface
