@@ -29,7 +29,7 @@ fi
 
 #=========================================================================================
 
-# Start jackett in console mode
+# Start transmission in console mode
 exec gosu transmission \
     /usr/bin/transmission-daemon \
     --config-dir /config \
