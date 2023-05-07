@@ -2,33 +2,33 @@ FROM stlouisn/ubuntu:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-COPY rootfs /
+#COPY rootfs /
 
 RUN \
 
-    # Create transmission group
+    # Create fail2ban group
     groupadd \
         --system \
         --gid 10000 \
-        transmission && \
+        fail2ban && \
 
-    # Create transmission user
+    # Create fail2ban user
     useradd \
         --system \
         --no-create-home \
         --shell /sbin/nologin \
-        --comment transmission \
+        --comment fail2ban \
         --gid 10000 \
         --uid 10000 \
-        transmission && \
+        fail2ban && \
 
     # Update apt-cache
     apt-get update && \
 
-    # Install transmission-client
+    # Install fail2ban
     apt-get install -y --no-install-recommends \
-        transmission-cli \
-        transmission-daemon && \
+        fail2ban \
+        whois && \
 
     # Clean apt-cache
     apt-get autoremove -y --purge && \
@@ -48,6 +48,6 @@ RUN \
         /var/lib/apt \
         /var/log/*
 
-VOLUME /config
+#VOLUME /config
 
 ENTRYPOINT ["/usr/local/bin/docker_entrypoint.sh"]
