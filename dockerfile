@@ -30,6 +30,12 @@ RUN \
         fail2ban \
         whois && \
 
+# sed replace/insert the following into /etc/fail2ban.conf
+    #bantime = 3600
+    #ignoreip = 127.0.0.0/8 10.0.0.0/8 172.27.0.0/16 192.168.0.0/16
+
+    rm /etc/fail2ban/jail.d/defaults-debian.conf && \
+
     # Clean apt-cache
     apt-get autoremove -y --purge && \
     apt-get autoclean -y && \
