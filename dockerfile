@@ -2,6 +2,8 @@ FROM stlouisn/ubuntu:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+COPY rootfs /
+
 RUN \
 
     # Create fail2ban group
