@@ -25,5 +25,5 @@ Fail2Ban protects against security threats, such as dictionary, DoS, DDoS, and b
 
 #### Links
 
-*https://github.com/fail2ban/fail2ban*
+*https://github.com/fail2ban/fail2ban*  
 *https://www.fail2ban.org/wiki/index.php/Main_Page*
