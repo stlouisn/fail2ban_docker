@@ -2,7 +2,7 @@
 export BUILD_PLATFORMS="linux/amd64,linux/arm64,linux/arm/v7"
 
 # Docker labels
-export C_DESCRIPTION="bittorrent client"
+export C_DESCRIPTION="intrusion prevention"
 export C_MAINTAINER="stlouisn"
-export C_NAME="transmission"
+export C_NAME="fail2ban"
 export C_TAG="latest"
