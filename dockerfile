@@ -28,6 +28,7 @@ RUN \
     # Install fail2ban
     apt-get install -y --no-install-recommends \
         fail2ban \
+        nftables \
         whois && \
 
 # sed replace/insert the following into /etc/fail2ban.conf
