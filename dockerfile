@@ -2,8 +2,6 @@ FROM stlouisn/ubuntu:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-#COPY rootfs /
-
 RUN \
 
     # Create fail2ban group
@@ -50,7 +48,5 @@ RUN \
         /var/cache \
         /var/lib/apt \
         /var/log/*
-
-#VOLUME /config
 
 ENTRYPOINT ["/usr/local/bin/docker_entrypoint.sh"]
